@@ -19,7 +19,7 @@ function InstallPhpSdk {
 	SetupPrerequisites
 
 	$FileName  = "php-sdk-${Version}"
-	$RemoteUrl = "https://github.com/Microsoft/php-sdk-binary-tools/archive/${FileName}.zip"
+	$RemoteUrl = "https://github.com/php/php-sdk-binary-tools/archive/${FileName}.zip"
 	$Archive   = "C:\Downloads\${FileName}.zip"
 
 	if (-not (Test-Path "${InstallPath}\bin\php\php.exe")) {
@@ -55,7 +55,7 @@ function InstallPhp {
 	Write-Debug "Install PHP v${FullVersion}"
 
 	$ReleasesPart = "releases"
-	if ([System.Convert]::ToDecimal($Version) -lt 7.1) {
+	if ([System.Convert]::ToDecimal($Version) -lt 7.3) {
 		$ReleasesPart = "releases/archives"
 	}
 
@@ -92,7 +92,7 @@ function InstallPhpDevPack {
 	Write-Debug "Install PHP Dev for PHP v${Version}"
 
 	$ReleasesPart = "releases"
-	if ([System.Convert]::ToDecimal($PhpVersion) -lt 7.1) {
+	if ([System.Convert]::ToDecimal($PhpVersion) -lt 7.3) {
 		$ReleasesPart = "releases/archives"
 	}
 

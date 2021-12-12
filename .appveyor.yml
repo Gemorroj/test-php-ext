@@ -11,36 +11,6 @@ environment:
   EXTNAME: skeleton
 
   matrix:
-    - PHP_VERSION: 7.2
-      BUILD_TYPE: Win32
-      VC_VERSION: vc15
-      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-
-    - PHP_VERSION: 7.2
-      BUILD_TYPE: nts-Win32
-      VC_VERSION: vc15
-      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-
-    - PHP_VERSION: 7.3
-      BUILD_TYPE: Win32
-      VC_VERSION: vc15
-      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-
-    - PHP_VERSION: 7.3
-      BUILD_TYPE: nts-Win32
-      VC_VERSION: vc15
-      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-
-    - PHP_VERSION: 7.4
-      BUILD_TYPE: Win32
-      VC_VERSION: vc15
-      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-
-    - PHP_VERSION: 7.4
-      BUILD_TYPE: nts-Win32
-      VC_VERSION: vc15
-      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-
     - PHP_VERSION: 8.0
       BUILD_TYPE: Win32
       VC_VERSION: vs16
@@ -51,7 +21,18 @@ environment:
       VC_VERSION: vs16
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
 
-  PHP_SDK_VERSION: 2.2.0
+    - PHP_VERSION: 8.1
+      BUILD_TYPE: Win32
+      VC_VERSION: vs16
+      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
+
+    - PHP_VERSION: 8.1
+      BUILD_TYPE: nts-Win32
+      VC_VERSION: vs16
+      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
+
+
+  PHP_SDK_VERSION: master # 2.2.0
   TEST_PHP_EXECUTABLE: C:\php\php.exe
   NO_INTERACTION: 1
   REPORT_EXIT_STATUS: 1
