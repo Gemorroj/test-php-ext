@@ -41,13 +41,13 @@
 #if HAVE_SKELETON
 
 /* Argument info for each function, used for reflection */
-ZEND_BEGIN_ARG_INFO_EX(arginfo_skeleton_nop, 0, 1, 0)
+ZEND_BEGIN_ARG_INFO_EX(arginfo_skeleton_concat, 0, 1, 0)
     ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 1)
 ZEND_END_ARG_INFO()
 
 /* Add all functions. (Keep PHP_FE_END as last element) */
 static const zend_function_entry functions[] = {
-    PHP_FE(skeleton_nop, arginfo_skeleton_nop)
+    PHP_FE(skeleton_concat, arginfo_skeleton_concat)
     PHP_FE_END
 };
 
@@ -69,7 +69,7 @@ ZEND_GET_MODULE(skeleton)
 #endif
 
 /* Replace the example function with something better :) */
-PHP_FUNCTION(skeleton_nop)
+PHP_FUNCTION(skeleton_concat)
 {
     zend_string *str;
 
@@ -77,6 +77,10 @@ PHP_FUNCTION(skeleton_nop)
         Z_PARAM_STR(str)
     ZEND_PARSE_PARAMETERS_END();
 
+    str = zend_string_concat2(
+            ZSTR_VAL(str), ZSTR_LEN(str),
+            " test", 5
+    );
     RETVAL_STR(str);
 }
 

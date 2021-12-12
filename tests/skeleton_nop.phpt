@@ -1,10 +1,9 @@
 --TEST--
-skeleton_nop basic test
+skeleton_concat basic test
 --FILE--
 <?php
-var_dump(skeleton_nop("Hello World"));
+var_dump(skeleton_concat("Hello World"));
 
 ?>
 --EXPECT--
-string(11) "Hello World"
-
+string(16) "Hello World test"

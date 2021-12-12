@@ -43,7 +43,7 @@
 #endif
 
 /* Declare all functions and classes of the extension */
-static PHP_FUNCTION(skeleton_nop);
+static PHP_FUNCTION(skeleton_concat);
 
 extern zend_module_entry skeleton_module_entry;
 

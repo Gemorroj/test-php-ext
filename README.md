@@ -3,7 +3,7 @@
 - docker-compose exec php sh
 - config clion with docker toolchain
 - run configure in clion
-- run make in docker shell
+- run `./configure`, `make` and `make test` in docker shell
 - see `modules` directory
 
 

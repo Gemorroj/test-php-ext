@@ -3,6 +3,7 @@
 branches:
   only:
   - master
+  - main
   - appveyor
   - w32
   - /^v\d+\.\d+\.\d+$/
