@@ -18,7 +18,7 @@ function InstallPhpSdk {
 	Write-Debug "Install PHP SDK binary tools: ${Version}"
 	SetupPrerequisites
 
-	$FileName  = "php-sdk-${Version}"
+	$FileName  = if ($Version -eq "master") {"master"} else {"php-sdk-${Version}"}
 	$RemoteUrl = "https://github.com/php/php-sdk-binary-tools/archive/${FileName}.zip"
 	$Archive   = "C:\Downloads\${FileName}.zip"
 

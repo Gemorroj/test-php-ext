@@ -32,7 +32,7 @@ environment:
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
 
 
-  PHP_SDK_VERSION: refs/tags/master # 2.2.0
+  PHP_SDK_VERSION: master # 2.2.0
   TEST_PHP_EXECUTABLE: C:\php\php.exe
   NO_INTERACTION: 1
   REPORT_EXIT_STATUS: 1
